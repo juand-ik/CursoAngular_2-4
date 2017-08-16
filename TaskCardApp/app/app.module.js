@@ -14,13 +14,18 @@ var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
 //Modulos
 var card_component_1 = require('./card/card.component');
+//Modulos externos
+var http_1 = require('@angular/http');
+var weather_component_1 = require('./weather-widget/component/weather.component');
+var speed_unit_pipe_1 = require('./weather-widget/pipe/speed-unit.pipe');
+var temp_unit_pipe_1 = require('./weather-widget/pipe/temp-unit.pipe');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent, card_component_1.CardComponent],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.JsonpModule, http_1.HttpModule],
+            declarations: [app_component_1.AppComponent, card_component_1.CardComponent, weather_component_1.WeatherComponent, speed_unit_pipe_1.SpeedUnitPipe, temp_unit_pipe_1.TempUnitPipe],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
